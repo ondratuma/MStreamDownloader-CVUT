@@ -369,7 +369,7 @@ async function defaultLogin(page, email, password) {
     // await sleep(2000) // maybe needed for slow connections
     await page.waitForSelector('input[type="password"]');
     await page.keyboard.type(password);
-    await page.click('input[type="submit"]');
+    await page.click('#submitButton');
 
     try {
       await page.waitForSelector('div[id="passwordError"]', { timeout: 1000 });
